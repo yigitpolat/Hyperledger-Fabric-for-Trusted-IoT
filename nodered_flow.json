@@ -1,0 +1,772 @@
+[
+  {
+      "id": "3079479.7b460b8",
+      "type": "tab",
+      "label": "Dashboard",
+      "disabled": true,
+      "info": ""
+  },
+  {
+      "id": "fa071453.aa8158",
+      "type": "tab",
+      "label": "Registration",
+      "disabled": true,
+      "info": ""
+  },
+  {
+      "id": "dd3bc674.02e148",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Sensor Data",
+      "icon": "fa-thermometer-quarter",
+      "order": 1,
+      "disabled": false,
+      "hidden": false
+  },
+  {
+      "id": "dd1e2f0d.4c432",
+      "type": "ui_group",
+      "z": "",
+      "name": "Sensor",
+      "tab": "dd3bc674.02e148",
+      "order": 1,
+      "disp": false,
+      "width": "18",
+      "collapse": false
+  },
+  {
+      "id": "205c8441.d27dac",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Sensor History",
+      "icon": "fa-history",
+      "order": 2,
+      "disabled": false,
+      "hidden": false
+  },
+  {
+      "id": "7e6e1f6.40813e",
+      "type": "ui_group",
+      "z": "",
+      "name": "Group 1",
+      "tab": "205c8441.d27dac",
+      "order": 1,
+      "disp": false,
+      "width": "20",
+      "collapse": false
+  },
+  {
+      "id": "a6666904.11d868",
+      "type": "ui_tab",
+      "name": "Tab 3",
+      "icon": "dashboard",
+      "order": 3
+  },
+  {
+      "id": "6316f985.c92c38",
+      "type": "ui_group",
+      "z": "",
+      "name": "Group 1",
+      "tab": "a6666904.11d868",
+      "order": 1,
+      "disp": true,
+      "width": "20",
+      "collapse": false
+  },
+  {
+      "id": "f3589a6c.5d77f8",
+      "type": "ui_tab",
+      "name": "Tab 4",
+      "icon": "dashboard",
+      "order": 4
+  },
+  {
+      "id": "7015cdc1.47b694",
+      "type": "ui_group",
+      "z": "",
+      "name": "Group 1",
+      "tab": "f3589a6c.5d77f8",
+      "order": 1,
+      "disp": true,
+      "width": "20",
+      "collapse": false
+  },
+  {
+      "id": "765638d6.d09398",
+      "type": "ui_base",
+      "theme": {
+          "name": "theme-light",
+          "lightTheme": {
+              "default": "#0094CE",
+              "baseColor": "#dc000d",
+              "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+              "edited": true,
+              "reset": false
+          },
+          "darkTheme": {
+              "default": "#097479",
+              "baseColor": "#097479",
+              "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+              "edited": true,
+              "reset": false
+          },
+          "customTheme": {
+              "name": "Untitled Theme 1",
+              "default": "#4B7930",
+              "baseColor": "#4B7930",
+              "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+          },
+          "themeState": {
+              "base-color": {
+                  "default": "#0094CE",
+                  "value": "#dc000d",
+                  "edited": true
+              },
+              "page-titlebar-backgroundColor": {
+                  "value": "#dc000d",
+                  "edited": false
+              },
+              "page-backgroundColor": {
+                  "value": "#fafafa",
+                  "edited": false
+              },
+              "page-sidebar-backgroundColor": {
+                  "value": "#000000",
+                  "edited": false
+              },
+              "group-textColor": {
+                  "value": "#ff2936",
+                  "edited": false
+              },
+              "group-borderColor": {
+                  "value": "#ffffff",
+                  "edited": false
+              },
+              "group-backgroundColor": {
+                  "value": "#ffffff",
+                  "edited": false
+              },
+              "widget-textColor": {
+                  "value": "#111111",
+                  "edited": false
+              },
+              "widget-backgroundColor": {
+                  "value": "#dc000d",
+                  "edited": false
+              },
+              "widget-borderColor": {
+                  "value": "#ffffff",
+                  "edited": false
+              },
+              "base-font": {
+                  "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+              }
+          },
+          "angularTheme": {
+              "primary": "indigo",
+              "accents": "blue",
+              "warn": "red",
+              "background": "grey"
+          }
+      },
+      "site": {
+          "name": "Node-RED Dashboard",
+          "hideToolbar": "false",
+          "allowSwipe": "false",
+          "lockMenu": "false",
+          "allowTempTheme": "true",
+          "dateFormat": "DD/MM/YYYY",
+          "sizes": {
+              "sx": 48,
+              "sy": 48,
+              "gx": 6,
+              "gy": 6,
+              "cx": 6,
+              "cy": 6,
+              "px": 0,
+              "py": 0
+          }
+      }
+  },
+  {
+      "id": "34dc6e4f.2c90e2",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Sensor Data",
+      "icon": "fa-thermometer-quarter",
+      "order": 1,
+      "disabled": false,
+      "hidden": false
+  },
+  {
+      "id": "68660c56.7090f4",
+      "type": "ui_group",
+      "z": "",
+      "name": "Sensor",
+      "tab": "34dc6e4f.2c90e2",
+      "order": 1,
+      "disp": false,
+      "width": "18",
+      "collapse": false
+  },
+  {
+      "id": "b16e97db.f84868",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Sensor History",
+      "icon": "fa-history",
+      "order": 2,
+      "disabled": false,
+      "hidden": false
+  },
+  {
+      "id": "fcda0c4b.a91cc",
+      "type": "ui_group",
+      "z": "",
+      "name": "Group 1",
+      "tab": "b16e97db.f84868",
+      "order": 1,
+      "disp": false,
+      "width": "20",
+      "collapse": false
+  },
+  {
+      "id": "ea5e414f.eb9a3",
+      "type": "ui_tab",
+      "name": "Tab 3",
+      "icon": "dashboard",
+      "order": 3
+  },
+  {
+      "id": "f2dd634.43f2ba",
+      "type": "ui_group",
+      "z": "",
+      "name": "Group 1",
+      "tab": "ea5e414f.eb9a3",
+      "order": 1,
+      "disp": true,
+      "width": "20",
+      "collapse": false
+  },
+  {
+      "id": "886382da.986ab",
+      "type": "ui_tab",
+      "name": "Tab 4",
+      "icon": "dashboard",
+      "order": 4
+  },
+  {
+      "id": "394f4b7c.c968d4",
+      "type": "ui_group",
+      "z": "",
+      "name": "Group 1",
+      "tab": "886382da.986ab",
+      "order": 1,
+      "disp": true,
+      "width": "20",
+      "collapse": false
+  },
+  {
+      "id": "dc78c6c4.d3b5a8",
+      "type": "debug",
+      "z": "3079479.7b460b8",
+      "name": "myName",
+      "active": false,
+      "tosidebar": true,
+      "complete": "payload.d.myName",
+      "x": 440,
+      "y": 100,
+      "wires": []
+  },
+  {
+      "id": "1c93d.7b6e46c38",
+      "type": "debug",
+      "z": "3079479.7b460b8",
+      "name": "ambientTemp",
+      "active": false,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "payload.d.ambientTemp",
+      "x": 460,
+      "y": 140,
+      "wires": []
+  },
+  {
+      "id": "b8a946c9.e7a4c8",
+      "type": "ibmiot in",
+      "z": "3079479.7b460b8",
+      "authentication": "quickstart",
+      "apiKey": "",
+      "inputType": "evt",
+      "logicalInterface": "",
+      "ruleId": "",
+      "deviceId": "247189088a84",
+      "applicationId": "",
+      "deviceType": "+",
+      "eventType": "+",
+      "commandType": "",
+      "format": "json",
+      "name": "IBM IoT App In",
+      "service": "quickstart",
+      "allDevices": false,
+      "allApplications": false,
+      "allDeviceTypes": true,
+      "allLogicalInterfaces": false,
+      "allEvents": true,
+      "allCommands": false,
+      "allFormats": false,
+      "qos": "0",
+      "x": 160,
+      "y": 60,
+      "wires": [
+          [
+              "dc78c6c4.d3b5a8",
+              "1c93d.7b6e46c38",
+              "9314ee6e.507af",
+              "74f36f0e.68282"
+          ]
+      ]
+  },
+  {
+      "id": "605747b2.9ed128",
+      "type": "function",
+      "z": "3079479.7b460b8",
+      "name": "Body / Headers",
+      "func": "temp = msg.payload.d.ambientTemp;\n\nvar date = new Date();\nvar options = { timeZone: 'Europe/Istanbul', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };\nvar time = date.toLocaleDateString('tr-TR', options);\n\n\nmsg.payload = {'username':'yp','channel':'channel1', 'smartcontract':'cc', 'args': {'sensorID':'sensor5', 'temp':temp,'time':time} };\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 500,
+      "y": 220,
+      "wires": [
+          [
+              "b2199710.dedf98"
+          ]
+      ]
+  },
+  {
+      "id": "5a06b106.97b18",
+      "type": "debug",
+      "z": "3079479.7b460b8",
+      "name": "Result",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "true",
+      "x": 970,
+      "y": 220,
+      "wires": []
+  },
+  {
+      "id": "b2199710.dedf98",
+      "type": "http request",
+      "z": "3079479.7b460b8",
+      "name": "Add Temperature HTTP Request",
+      "method": "POST",
+      "ret": "txt",
+      "url": "http://rest-api:3000/api/addTemp",
+      "tls": "",
+      "x": 730,
+      "y": 220,
+      "wires": [
+          [
+              "5a06b106.97b18",
+              "d79f3fdb.0b47a"
+          ]
+      ]
+  },
+  {
+      "id": "74f36f0e.68282",
+      "type": "delay",
+      "z": "3079479.7b460b8",
+      "name": "",
+      "pauseType": "rate",
+      "timeout": "10",
+      "timeoutUnits": "seconds",
+      "rate": "1",
+      "nbRateUnits": "5",
+      "rateUnits": "second",
+      "randomFirst": "1",
+      "randomLast": "5",
+      "randomUnits": "seconds",
+      "drop": false,
+      "x": 300,
+      "y": 220,
+      "wires": [
+          [
+              "605747b2.9ed128"
+          ]
+      ]
+  },
+  {
+      "id": "dc8f740c.7dbac8",
+      "type": "http request",
+      "z": "3079479.7b460b8",
+      "name": "Get History HTTP Request",
+      "method": "POST",
+      "ret": "txt",
+      "url": "http://rest-api:3000/api/getHistory",
+      "tls": "",
+      "x": 500,
+      "y": 380,
+      "wires": [
+          [
+              "8718b41.1317048"
+          ]
+      ]
+  },
+  {
+      "id": "8718b41.1317048",
+      "type": "json",
+      "z": "3079479.7b460b8",
+      "name": "JSON to Object",
+      "property": "payload",
+      "action": "",
+      "pretty": false,
+      "x": 740,
+      "y": 380,
+      "wires": [
+          [
+              "6fca8976.f86df8",
+              "c1fc4d8.3dca7b"
+          ]
+      ]
+  },
+  {
+      "id": "6fca8976.f86df8",
+      "type": "debug",
+      "z": "3079479.7b460b8",
+      "name": "Result",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "payload",
+      "x": 910,
+      "y": 380,
+      "wires": []
+  },
+  {
+      "id": "c1fc4d8.3dca7b",
+      "type": "template",
+      "z": "3079479.7b460b8",
+      "name": "Template",
+      "field": "style",
+      "fieldType": "msg",
+      "format": "html",
+      "syntax": "mustache",
+      "template": "table {\n    color: #333;\n    font-family: Helvetica, Arial, sans-serif;\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n}\ntd, th {\n    border: 1px solid transparent;\n    /* No more visible border */\n    height: 30px;\n    transition: all 0.3s;\n    /* Simple transition for hover effect */\n}\nth {\n    background: #DFDFDF;\n    /* Darken header a bit */\n    font-weight: bold;\n}\ntd {\n    background: #FAFAFA;\n    text-align: center;\n}\n\n/* Cells in even rows (2,4,6...) are one color */\n\ntr:nth-child(even) td {\n    background: #F1F1F1;\n}\n\n/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */\n\ntr:nth-child(odd) td {\n    background: #FEFEFE;\n}\ntr td:hover {\n    background: #666;\n    color: #FFF;\n}\n\n/* Hover cell effect! */",
+      "x": 740,
+      "y": 440,
+      "wires": [
+          [
+              "a9fabf94.b58cf"
+          ]
+      ]
+  },
+  {
+      "id": "a9fabf94.b58cf",
+      "type": "ui_template",
+      "z": "3079479.7b460b8",
+      "group": "fcda0c4b.a91cc",
+      "name": "Table",
+      "order": 0,
+      "width": "20",
+      "height": "13",
+      "format": "<style>\n    {{msg.style}}\n</style>\n\n<table>\n  <thead>\n    <tr>\n      <th scope=\"col\">TxId</th>\n      <th scope=\"col\">SensorID</th>\n      <th scope=\"col\">Time</th>\n      <th scope=\"col\">Temp</th>\n    </tr>\n  </thead>\n  \n  <tr ng-repeat=\"obj in msg.payload\">\n    <td>{{ obj.TxId }}</td>\n    <td>{{ obj.Value.sensorID }}</td>\n    <td>{{ obj.Value.time }}</td>\n    <td>{{ obj.Value.temp }}</td>\n  </tr>\n</table>",
+      "storeOutMessages": false,
+      "fwdInMessages": true,
+      "templateScope": "local",
+      "x": 910,
+      "y": 440,
+      "wires": [
+          []
+      ]
+  },
+  {
+      "id": "9314ee6e.507af",
+      "type": "ui_gauge",
+      "z": "3079479.7b460b8",
+      "name": "",
+      "group": "68660c56.7090f4",
+      "order": 1,
+      "width": 0,
+      "height": 0,
+      "gtype": "gage",
+      "title": "Temperature",
+      "label": "°C",
+      "format": "{{msg.payload.d.ambientTemp}}",
+      "min": 0,
+      "max": "50",
+      "colors": [
+          "#00b500",
+          "#e6e600",
+          "#ca3838"
+      ],
+      "seg1": "",
+      "seg2": "",
+      "x": 450,
+      "y": 60,
+      "wires": []
+  },
+  {
+      "id": "d79f3fdb.0b47a",
+      "type": "ui_toast",
+      "z": "3079479.7b460b8",
+      "position": "top right",
+      "displayTime": "1",
+      "highlight": "",
+      "outputs": 0,
+      "ok": "OK",
+      "cancel": "",
+      "topic": "Success",
+      "name": "Notification",
+      "x": 990,
+      "y": 280,
+      "wires": []
+  },
+  {
+      "id": "fa13d17d.3631a",
+      "type": "ui_button",
+      "z": "3079479.7b460b8",
+      "name": "",
+      "group": "fcda0c4b.a91cc",
+      "order": 1,
+      "width": 0,
+      "height": 0,
+      "passthru": false,
+      "label": "Get History",
+      "tooltip": "",
+      "color": "",
+      "bgcolor": "",
+      "icon": "",
+      "payload": "",
+      "payloadType": "str",
+      "topic": "",
+      "x": 70,
+      "y": 380,
+      "wires": [
+          [
+              "807a21c2.b7d0b"
+          ]
+      ]
+  },
+  {
+      "id": "807a21c2.b7d0b",
+      "type": "function",
+      "z": "3079479.7b460b8",
+      "name": "Body / Headers",
+      "func": "msg.payload = {'username':'yp','channel':'channel1', 'smartcontract':'cc', \"args\": {\"sensorID\":\"sensor5\"} };\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 260,
+      "y": 380,
+      "wires": [
+          [
+              "dc8f740c.7dbac8"
+          ]
+      ]
+  },
+  {
+      "id": "ecf11c3a.76b3b",
+      "type": "http request",
+      "z": "fa071453.aa8158",
+      "name": "Enroll Admin HTTP Request",
+      "method": "POST",
+      "ret": "txt",
+      "url": "http://rest-api:3000/api/enrollAdmin",
+      "tls": "",
+      "x": 560,
+      "y": 100,
+      "wires": [
+          [
+              "8b4ff6b8.57f5e8"
+          ]
+      ]
+  },
+  {
+      "id": "6118ae4e.4f8c3",
+      "type": "function",
+      "z": "fa071453.aa8158",
+      "name": "Body / Headers",
+      "func": "msg.payload = {\"adminName\": \"admin\", \"password\":\"adminpw\"};\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 320,
+      "y": 100,
+      "wires": [
+          [
+              "ecf11c3a.76b3b"
+          ]
+      ]
+  },
+  {
+      "id": "dc2b3f7a.32932",
+      "type": "inject",
+      "z": "fa071453.aa8158",
+      "name": "POST",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 130,
+      "y": 100,
+      "wires": [
+          [
+              "6118ae4e.4f8c3"
+          ]
+      ]
+  },
+  {
+      "id": "8b4ff6b8.57f5e8",
+      "type": "debug",
+      "z": "fa071453.aa8158",
+      "name": "Result",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "payload",
+      "x": 790,
+      "y": 100,
+      "wires": []
+  },
+  {
+      "id": "9d7b14bd.4c5538",
+      "type": "http request",
+      "z": "fa071453.aa8158",
+      "name": "Register User HTTP Request",
+      "method": "POST",
+      "ret": "txt",
+      "url": "http://rest-api:3000/api/registerUser",
+      "tls": "",
+      "x": 560,
+      "y": 200,
+      "wires": [
+          [
+              "2a19d7c3.93b888"
+          ]
+      ]
+  },
+  {
+      "id": "af2b3fe7.8d73",
+      "type": "function",
+      "z": "fa071453.aa8158",
+      "name": "Body / Headers",
+      "func": "msg.payload = {\"adminName\": \"admin\", \"username\":\"yp\"};\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 320,
+      "y": 200,
+      "wires": [
+          [
+              "9d7b14bd.4c5538"
+          ]
+      ]
+  },
+  {
+      "id": "646c64ad.14417c",
+      "type": "inject",
+      "z": "fa071453.aa8158",
+      "name": "POST",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 130,
+      "y": 200,
+      "wires": [
+          [
+              "af2b3fe7.8d73"
+          ]
+      ]
+  },
+  {
+      "id": "2a19d7c3.93b888",
+      "type": "debug",
+      "z": "fa071453.aa8158",
+      "name": "Result",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "payload",
+      "x": 790,
+      "y": 200,
+      "wires": []
+  },
+  {
+      "id": "9d60eb7c.e2dda8",
+      "type": "http request",
+      "z": "fa071453.aa8158",
+      "name": "Register Sensor HTTP Request",
+      "method": "POST",
+      "ret": "txt",
+      "url": "http://rest-api:3000/api/registerSensor",
+      "tls": "",
+      "x": 570,
+      "y": 300,
+      "wires": [
+          [
+              "4a7db6b6.56efb8"
+          ]
+      ]
+  },
+  {
+      "id": "c34c4f75.ed56a",
+      "type": "function",
+      "z": "fa071453.aa8158",
+      "name": "Body / Headers",
+      "func": "msg.payload = {\"username\": \"yp\", \"channel\":\"channel1\", \"smartcontract\":\"cc\", \"args\":{\"sensorID\": \"sensor5\"} }\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "x": 320,
+      "y": 300,
+      "wires": [
+          [
+              "9d60eb7c.e2dda8"
+          ]
+      ]
+  },
+  {
+      "id": "d3e1471b.c7b718",
+      "type": "inject",
+      "z": "fa071453.aa8158",
+      "name": "POST",
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "x": 130,
+      "y": 300,
+      "wires": [
+          [
+              "c34c4f75.ed56a"
+          ]
+      ]
+  },
+  {
+      "id": "4a7db6b6.56efb8",
+      "type": "debug",
+      "z": "fa071453.aa8158",
+      "name": "Result",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "payload",
+      "x": 790,
+      "y": 300,
+      "wires": []
+  }
+]
