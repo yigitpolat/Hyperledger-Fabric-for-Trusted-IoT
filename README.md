@@ -2,6 +2,16 @@
 
 ## Architecture Flow
 
+<p align="center"><img src="docs/architecture.png"></p>
+
+1. Watson IoT Platform input node that comes build-in with Node-RED receive events sent from devices (temperature in our case).
+2. In order to invoke and query the ledger (to write and read the data) nodes inside the Node-RED perform HTTP requests and returns the response to the APIs.
+3. APIs defined based on Hyperledger Fabric Client SDK for Node.js interact with the chaincode inside the Hyperledger Fabric Network and updates or reads the ledger.
+4. Endorser Peers executes the functions that is defined in the chaincode according the request and sends is to the Orderer.
+5. Orderer creates the blocks and sends it back to the Anchor Peers which will broadcast the blocks to the Endorser Peers.
+
+> Note: In this case, CouchDBs are in use as state database.
+
 ## Included Components
 
 * [IBM Cloud Kubernetes Service](https://www.ibm.com/cloud/container-service) delivers powerful tools by combining Docker containers, the Kubernetes technology, an intuitive user experience, and built-in security and isolation to automate the deployment, operation, scaling, and monitoring of containerized apps in a cluster of compute hosts.
@@ -44,8 +54,8 @@ Open a new Terminal window and execute following commands to be sure you have in
 Clone this repository in a folder your choice:
 
 ```bash
-    git clone https://...
-    cd ..
+    git clone https://github.com/yigitpolat/Hyperledger-IoT
+    cd Hyperledger-IoT
 ```
 
 ### 2. Create and Access IBM Cloud Kubernetes Cluster
@@ -232,14 +242,57 @@ Up until now, you have developed Hyperledger Fabric Network which might be a bac
 Node-RED dashboard will be your front-end. You will be able to see incoming sensor data and the history of the ledger from this dashboard. Besides, all the HTTP requests will be execute via this tool.
 
 > Note: There is Node-RED service in the IBM Cloud Catalog. However, in this pattern you will use Node-RED inside a container.
+>
+> Note: If you wish to use Node-RED service you can import the flow by using [this](./nodered_flow.json)
 
 * The following commands will first pull the container image from DockerHub and create a deployment named "nodered", then create a Kubernetes Service which exposes this deployment
 
 ```bash
-    TODO: change the image user names, sensor id
-    kubectl run nodered --image=yigitpolat/kworks-nodered --port=1880
+    kubectl run nodered --image=yigitpolat/hyperledger-iot-nodered --port=1880
     kubectl apply -f node-red-svc.yaml
 ```
 
+## Understanding the Application
+
+Congratulations! You have deployed your very first Hyperledger Fabric - IoT collabrative application. Now, it is time to understand how the manage the application. First, execute the below commands to get your Kubernetes Worker Node's external IP.
+
+```bash
+    kubectl get pods -o wide
+    kubectl get nodes
+```
+
+<p align="center"><img src="docs/screen11.png"></p>
+
+Open your favorite browser and navigate to "Your_external_IP":30002 which will end up with Node-RED service. For example, 52.116.26.52:30002
+
+Double click on "Registration" tab, set Status to "Enabled", hit done. Deploy the application from right top corner. Execute the three HTTP Post request respectively.
+
+* First POST will enroll an admin named "admin" to the Certificate Authority of the Organization 1.
+* Second POST will enroll a register and enroll user named "user1" to the Certificate Authority of the Organization 2.
+* Third POST Will register a new sensor which will be used to collect the data from.
+
+You will end up with a screen as below. You can see the returning results on the right-hand side.
+
+<p align="center"><img src="docs/screen12.png"></p>
+
+It is time to create an User Interface to make the application to look fancy. Double click on "Dashboard" tab, set Status to "Enabled", hit done. Deploy the application from right top corner.
+
+> Note: Below screenshot shows how to use dummy data generator if you are not able to provide a sensor.
+
+<p align="center"><img src="docs/screen13.png"></p>
+
+Finally, navigate to "Your_external_IP":30002/ui to see your dashboard. Now you are able to see your sensor data live on a gauge. Besides, you can query sensor data history from navigating to "Sensor History" tab from the hamburger menu. Remember that, the data history is coming from the Ledger where the data is storing immutablly in the blockchain.
+
+Here is the screenshots of the final views of the application.
+
+<p align="center"><img src="docs/screen14.png"></p>
+
+<p align="center"><img src="docs/screen15.png"></p>
+
 ## Extending Code Pattern
-TODO: chaincode, sdk, ui
+
+Instead developing an application with full capabilities, this minimum valuable product is much more understandable and instructive. However, it can be extended with several modifications.
+
+* Adding new functions to chaincode will bring new features to the application
+* According to new functions, API endpoints needed to be updated to fulfill the HTTP requests
+* Dashboard must be modified depending on the upcoming data
