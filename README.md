@@ -296,3 +296,7 @@ Instead developing an application with full capabilities, this minimum valuable 
 * Adding new functions to chaincode will bring new features to the application
 * According to new functions, API endpoints needed to be updated to fulfill the HTTP requests
 * Dashboard must be modified depending on the upcoming data
+
+## License
+
+[Apache License 2.0](./LICENSE)
