@@ -60,7 +60,7 @@ Clone this repository in a folder your choice:
 
 ### 2. Create and Access IBM Cloud Kubernetes Cluster
 
-As Hyperledger Fabric is a network consist of several components, we use microservice architecture on IBM Cloud Kubernetes Service.
+As Hyperledger Fabric is a network consists of several components, we use microservice architecture on IBM Cloud Kubernetes Service.
 
 #### 2.1. Create a Kubernetes Cluster on IBM Cloud
 
@@ -231,7 +231,7 @@ Up until now, you have developed Hyperledger Fabric Network which might be a bac
 
 ```bash
     cd ..
-    kubectl run rest-api --image=<your_account_name>/rest-api --port=3000
+    kubectl run rest-api --image=<your_account_name>/hyperledger-iot-rest-api --port=3000
     kubectl apply -f rest-api-svc.yaml
 ```
 
@@ -249,12 +249,38 @@ Node-RED dashboard will be your front-end. You will be able to see incoming sens
 
 ```bash
     kubectl run nodered --image=yigitpolat/hyperledger-iot-nodered --port=1880
+```
+
+* If you have Free Cluster use the following command to make nodered deployment accesible from the network.
+
+```bash
     kubectl apply -f node-red-svc.yaml
+```
+
+* If you have a Standard Cluster, IBM Cloud will provide you an Ingress Controller and Application Load Balancer which you can use to access your cluster from network. So that, you need to create ingress rules by following. 
+
+Note that, you must modify hosts and the secretName fields in the "create-ingress.yaml". To learn your Ingress Subdomain and Ingress Secret execute the following commands.
+
+```bash
+    ibmcloud ks cluster-get <your_cluster_name>
+```
+
+Now, you can create Node-RED service and Ingress rules. 
+
+```bash
+    kubectl apply -f node-red-svc-clusterIP.yaml
+    kubectl apply -f create-ingress.yaml
 ```
 
 ## Understanding the Application
 
-Congratulations! You have deployed your very first Hyperledger Fabric - IoT collabrative application. Now, it is time to understand how the manage the application. First, execute the below commands to get your Kubernetes Worker Node's external IP.
+Congratulations! You have deployed your very first Hyperledger Fabric - IoT collabrative application. Now, it is time to understand how the manage the application.
+
+### Access to Node-RED
+
+* If you have Free Cluster follow the below instructions to access to dashboard.
+
+First, execute the below commands to get your Kubernetes Worker Node's external IP.
 
 ```bash
     kubectl get pods -o wide
@@ -264,6 +290,10 @@ Congratulations! You have deployed your very first Hyperledger Fabric - IoT coll
 <p align="center"><img src="docs/screen11.png"></p>
 
 Open your favorite browser and navigate to "Your_external_IP":30002 which will end up with Node-RED service. For example, 52.116.26.52:30002
+
+* If you have Standart Cluster just navigate to host name of your cluster from the browser. For example, nodered.teknopark-hyperledger-iot.us-south.containers.appdomain.cloud
+
+### Registration
 
 Double click on "Registration" tab, set Status to "Enabled", hit done. Deploy the application from right top corner. Execute the three HTTP Post request respectively.
 
@@ -275,13 +305,15 @@ You will end up with a screen as below. You can see the returning results on the
 
 <p align="center"><img src="docs/screen12.png"></p>
 
+### Dashboard
+
 It is time to create an User Interface to make the application to look fancy. Double click on "Dashboard" tab, set Status to "Enabled", hit done. Deploy the application from right top corner.
 
 > Note: Below screenshot shows how to use dummy data generator if you are not able to provide a sensor.
 
 <p align="center"><img src="docs/screen13.png"></p>
 
-Finally, navigate to "Your_external_IP":30002/ui to see your dashboard. Now you are able to see your sensor data live on a gauge. Besides, you can query sensor data history from navigating to "Sensor History" tab from the hamburger menu. Remember that, the data history is coming from the Ledger where the data is storing immutablly in the blockchain.
+Finally, navigate to "Your_External_IP":30002/ui or nodered.teknopark-hyperledger-iot.us-south.containers.appdomain.cloud/ui to see your dashboard. Now you are able to see your sensor data live on a gauge. Besides, you can query sensor data history from navigating to "Sensor History" tab from the hamburger menu. Remember that, the data history is coming from the Ledger where the data is storing immutablly in the blockchain.
 
 Here is the screenshots of the final views of the application.
 
