@@ -323,7 +323,7 @@ Here is the screenshots of the final views of the application.
 
 ## Extending Code Pattern
 
-Instead developing an application with full capabilities, this minimum valuable product is much more understandable and instructive. However, it can be extended with several modifications.
+Instead developing an application with full capabilities, this minimum viable product is much more understandable and instructive. However, it can be extended with several modifications.
 
 * Adding new functions to chaincode will bring new features to the application
 * According to new functions, API endpoints needed to be updated to fulfill the HTTP requests
