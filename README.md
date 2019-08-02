@@ -216,7 +216,7 @@ Up until now, you have developed Hyperledger Fabric Network which might be a bac
 
 > Note: For the following steps, you must have 'DockerHub Account' in order to push and pull your container images. You can create an account from [here](https://hub.docker.com).
 
-* The following commands will create a container image and push it to your container registery.
+* The following commands will create a container image and push it to your container registry.
 
 ```bash
     cd ../API
@@ -227,11 +227,17 @@ Up until now, you have developed Hyperledger Fabric Network which might be a bac
 <p align="center"><img src="docs/screen8.png"></p>
 <p align="center"><img src="docs/screen9.png"></p>
 
-* The following commands will first pull the container image from your repository and create a deployment named "rest-api", then create a Kubernetes Service which exposes this deployment
+* If you are using a private registry, the Kubernetes Service needs permissions to pull your private container image from your registry.  You can provide the Kubernetes Service with your docker secrets by running this command:
+
+```bash
+    kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+```
+
+* The following commands will first pull the container image from your registry and create a deployment named "rest-api", then create a Kubernetes Service which exposes this deployment
 
 ```bash
     cd ..
-    kubectl run rest-api --image=<your_account_name>/hyperledger-iot-rest-api --port=3000
+    kubectl run rest-api --image=<your_account_name>/rest-api --port=3000
     kubectl apply -f rest-api-svc.yaml
 ```
 
