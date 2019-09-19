@@ -5,7 +5,7 @@ You should change the file cc.go under artifacts/chaincode/iot_chaincode
 ```bash
     kubectl apply -f copy_chaincode_version.yaml
     pod=$(kubectl get pods --selector=job-name=copychaincodeversion --output=jsonpath={.items..metadata.name})
-    kubectl cp ../../artifacts/chaincode $pod:/shared/
+    kubectl cp ../../artifacts/chaincode $pod:/shared/artifacts
     kubectl get pods -w
 ```
 
