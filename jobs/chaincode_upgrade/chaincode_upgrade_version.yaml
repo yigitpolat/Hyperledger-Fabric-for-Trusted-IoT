@@ -26,8 +26,8 @@ spec:
         - name: CHAINCODE_NAME
           value: "cc"
         - name: CHAINCODE_VERSION
-        #change here
-          value: "3.0" 
+        #change with new chaincode version
+          value: "4.0" 
         - name: FABRIC_CFG_PATH
           value: /etc/hyperledger/fabric
         - name: CORE_PEER_MSPCONFIGPATH
@@ -52,8 +52,8 @@ spec:
         - name: CHAINCODE_NAME
           value: "cc"
         - name: CHAINCODE_VERSION
-        #change here
-          value: "3.0"
+        #change with new chaincode version
+          value: "4.0"
         - name: FABRIC_CFG_PATH
           value: /etc/hyperledger/fabric
         - name: CORE_PEER_MSPCONFIGPATH
