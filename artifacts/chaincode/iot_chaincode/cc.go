@@ -11,11 +11,11 @@ import (
 	"github.com/hyperledger/fabric/protos/peer"
 )
 
-//SmartContract asd
+//SmartContract
 type SmartContract struct {
 }
 
-//Value asd
+//Value
 type Value struct {
 	SensorID string `json:"sensorID"`
 	Temp     string `json:"temp"`
